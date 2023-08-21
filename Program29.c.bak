@@ -1,29 +1,28 @@
 #include<stdio.h>
 
-int Summation(int iNo)
+int Factorial(int iNo)
 {
-	int iSum = 0;
-	int iCnt = 0;
+	int i = 1, Ans = 1; 
 	
-	for(iCnt = 1; iCnt <= iNo; iCnt++)
-	{
-		iSum = iSum + iCnt;
+	for(i=1; i<=iNo; i++)
+	{ 
+		Ans = Ans * i;
 	}
-	return iSum;
+	
+	return Ans;
+	
 }
 
 int main()
 {
 	int iRet = 0;
-	int iValue =0;
+	int iValue = 0;
 	
-	printf("Enter the Value:\n");
+	printf("Enter the value : ");
 	scanf("%d",&iValue);
 	
-	iRet = Summation(iValue);
-	
-	printf("Summation is : %d\n",iRet);
-	
+	iRet = Factorial(iValue);
+	printf("Factorial is : %d", iRet);
 	
 	return 0;
 }

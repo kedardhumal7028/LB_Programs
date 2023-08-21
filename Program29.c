@@ -2,28 +2,27 @@
 
 int Summation(int iNo)
 {
-	int iSum = 0;
-	int iCnt = 0;
+	int i = 0, Ans = 0; 
 	
-	for(iCnt = 1; iCnt <= iNo; iCnt++)
-	{
-		iSum = iSum + iCnt;
+	for(i=0; i<=i; i++)
+	{ 
+		Ans = Ans + i;
 	}
-	return iSum;
+	
+	return Ans;
+	
 }
 
 int main()
 {
 	int iRet = 0;
-	int iValue =0;
+	int iValue = 0;
 	
-	printf("Enter the Value:\n");
+	printf("Enter the value : ");
 	scanf("%d",&iValue);
 	
 	iRet = Summation(iValue);
-	
-	printf("Summation is : %d\n",iRet);
-	
+	printf("Summation is : %d", iRet);
 	
 	return 0;
 }
