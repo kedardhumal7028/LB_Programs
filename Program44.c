@@ -28,17 +28,18 @@ int main()
 	return 0;
 }*/
 
-void DisplayFactors(int iNo)
+void DisplayEvenFactors(int iNo)
 {
 	int iCnt = 0;
 	
 	printf("Factors of %d number is :\n",iNo);
 	
-	for(iCnt = 1; iCnt < iNo; iCnt++)
+	for(iCnt = 1; iCnt <= (iNo/2); iCnt++)
 	{
-		if((iNo % iCnt) == 0)
+		if((iNo % iCnt == 0 ) && (iCnt % 2 != 0))
 		{
-			printf("%d\n",iCnt);		
+			printf("%d\n",iCnt);	
+			
 		}
 	}
 }
@@ -50,7 +51,7 @@ int main()
 	printf("Enter number : ");
 	scanf("%d", &iValue);
 	
-	DisplayFactors(iValue);
+	DisplayEvenFactors(iValue);
 	
 	return 0;
 }
