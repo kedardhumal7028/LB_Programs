@@ -19,7 +19,7 @@ int MaxDigit(int iNo)
 		}
 		if(iMax == 9)
 		{
-			break; 
+			break;
 		}
 		
 		iNo = iNo / 10;

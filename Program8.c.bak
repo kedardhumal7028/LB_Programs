@@ -48,7 +48,7 @@ int main()
 {
 	int iValue = 0, iRet = 0;
 	
-	printf("Enter the number : \n");
+	printf("Enter the number");
 	scanf("%d",&iValue);
 	
 	iRet = Mult(iValue);
