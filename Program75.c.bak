@@ -2,10 +2,11 @@
 #include<stdlib.h>
 
 
-int CountEven(int Arr[], int iSize)
+void CountEvenOdd(int Arr[], int iSize)
 {
 	int iCnt = 0;
 	int iEvenCnt = 0;
+	int iOddCnt = 0;
 	
 	for(iCnt = 0; iCnt < iSize; iCnt++)
 	{
@@ -13,9 +14,16 @@ int CountEven(int Arr[], int iSize)
 		{
 			iEvenCnt++;
 		}
+		else
+		{
+			iOddCnt++;
+		}
 	}
 	
-	return iEvenCnt;
+	
+	printf("Even Count is : %d \n",iEvenCnt);
+	printf("Odd Count is : %d\n",iOddCnt);
+	
 }
 
 int main()
@@ -36,9 +44,9 @@ int main()
 		scanf("%d", &ptr[i]);
 	}
 	
-	iRet = CountEven(ptr, iLength);
+	 CountEvenOdd(ptr, iLength);
 	
-	printf("Count of Even Number is : %d\n",iRet);
+	
 	
 	free(ptr);
 	

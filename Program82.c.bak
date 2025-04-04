@@ -22,7 +22,7 @@ int Maximum(int Arr[], int iSize)
 int main()
 {
 	int *ptr = NULL;
-	int iLength = 0, i = 0, iRet = 0;
+	int iLength = 0, int i = 0, iRet = 0;
 	
 	printf("Enter no of Elements : \n");
 	scanf("%d",&iLength);
@@ -33,7 +33,7 @@ int main()
 	
 	for(i = 0; i < iLength; i++)
 	{
-		scanf("%d",&ptr[i]);
+		scanf("%d",&ptr[i];
 	}
 	
 	iRet = Maximum(ptr, iLength);

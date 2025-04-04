@@ -10,7 +10,15 @@ int CountDigit(int iNo)
 	int iDigit = 0;
 	int iCnt = 0;
 	
+	if(iNo == 0)	//filter
+	{
+		return 1;
+	}  
 	
+	if(iNo < 0)		//updater
+	{
+		iNo = -iNo;
+	}
 	
 	while(iNo > 0)
 	{

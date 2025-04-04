@@ -1,21 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int Maximum(int Arr[], int iSize)
+void DisplayReverse(int Arr[], int iSize)
 {
-	int iMax = Arr[0];
 	int iCnt = 0;
 	
-	for(iCnt = 0; iCnt < iSize; iCnt++)
+	for(iCnt = iSize-1; iCnt >= 0; iCnt--)
 	{
-		if(iMax < Arr[iCnt])
-		{
-			iMax = Arr[iCnt];
-		}
+		printf("%d\n", Arr[iCnt]);
 	}
 	
-	
-	return iMax;
 }
 
 
@@ -36,9 +30,10 @@ int main()
 		scanf("%d",&ptr[i]);
 	}
 	
-	iRet = Maximum(ptr, iLength);
+	printf("Revers Arr : \n");
 	
-	printf("Maximum no is : %d\n",iRet);
+	DisplayReverse(ptr, iLength);
+	
 	
 	free(ptr);
 	

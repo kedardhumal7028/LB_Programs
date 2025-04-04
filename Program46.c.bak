@@ -3,18 +3,8 @@
 int CountDigits(int iNo)
 {
 	
-	int iDigit = 0;
-	int iCnt = 0;
 	
-	while(iNo != 0)
-	{
-		iDigit = iNo % 10;
-		iNo = iNo / 10;
-		
-		iCnt++;
-	}
-	
-	return iCnt;
+	return 0;
 }
 
 int main()

@@ -36,7 +36,7 @@ int main()
 	
 	ptr = (int *)malloc(iLength * sizeof(int));
 	
-	printf("Enter the %d Elements : \n",iLength);
+	printf("Enter the Elements : \n");
 	
 	for(i = 0; i < iLength; i++)
 	{

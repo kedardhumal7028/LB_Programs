@@ -11,7 +11,7 @@ int sumOfDigit(int iNo)
 		iDigit = iNo % 10;
 		iNo = iNo / 10;
 		iSum = iSum + iDigit;
-		//iCnt++;
+		iCnt++;
 	}
 	return iSum;
 }

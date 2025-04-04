@@ -1,21 +1,21 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int Maximum(int Arr[], int iSize)
+int Minimum(int Arr[], int iSize)
 {
-	int iMax = Arr[0];
+	int iMin = Arr[0];
 	int iCnt = 0;
 	
 	for(iCnt = 0; iCnt < iSize; iCnt++)
 	{
-		if(iMax < Arr[iCnt])
+		if(iMin > Arr[iCnt])
 		{
-			iMax = Arr[iCnt];
+			iMin = Arr[iCnt];
 		}
 	}
 	
 	
-	return iMax;
+	return iMin;
 }
 
 
@@ -36,9 +36,9 @@ int main()
 		scanf("%d",&ptr[i]);
 	}
 	
-	iRet = Maximum(ptr, iLength);
+	iRet = Minimum(ptr, iLength);
 	
-	printf("Maximum no is : %d\n",iRet);
+	printf("Minimum no is : %d\n",iRet);
 	
 	free(ptr);
 	

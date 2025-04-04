@@ -1,39 +1,39 @@
-/*iNo = 721
-iDigit = iNo % 10
-iNo = iNo / 10
-*/
+//Acccept no from user 751 and output is 3
+// find no of digits in number
 
-//check digits in given number
 
 #include<stdio.h>
 
-int CountDigits(int iNo)
+
+int CountDigit(int iNo)
 {
-	int iCnt = 0;
 	int iDigit = 0;
-	
+	int iCnt = 0;
 	
 	while(iNo != 0)
 	{
-		iDigit = iNo % 10;
-		iNo = iNo / 10;
+		iDigit = iNo%10;
+		iNo = iNo/10;
 		iCnt++;
 	}
 	
+	
 	return iCnt;
 }
+
 
 int main()
 {
 	int iValue = 0;
 	int iRet = 0;
 	
-	printf("Please enter the number : ");
-	scanf("%d",&iValue);
+	printf("please enter number :\n");
+	scanf("%d", &iValue);
 	
-	iRet = CountDigits(iValue);
+	iRet = CountDigit(iValue);
 	
-	printf("number of digits are : %d\n", iRet);
+	printf("Number of digits are : %d", iRet);
+	
 	
 	return 0;
 }

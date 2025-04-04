@@ -1,10 +1,15 @@
 #include<stdio.h>
 
-int SumDigits(int iNo)
+int countEvenDigit(int iNo)
 {
-	
-	int iSum = 0;
 	int iDigit = 0;
+	int iAns = 0;
+	int iEvenCnt = 0;
+	
+	if(iNo == 0)
+	{
+		return 1;
+	}
 	
 	if(iNo < 0)
 	{
@@ -15,11 +20,13 @@ int SumDigits(int iNo)
 	{
 		iDigit = iNo % 10;
 		iNo = iNo / 10;
-		iSum = iSum + iDigit;
-		
+		if(iDigit % 2 == 0)
+		{
+			iEvenCnt++;
+		}
 	}
-	
-	return iSum;
+		
+	return iEvenCnt;
 }
 
 int main()
@@ -27,12 +34,12 @@ int main()
 	int iValue = 0;
 	int iRet = 0;
 	
-	printf("Please enter the number : ");
-	scanf("%d",&iValue);
+	printf("Enter a number : \n");
+	scanf("%d", &iValue);
 	
-	iRet = SumDigits(iValue);
+	iRet = countEvenDigit(iValue);
 	
-	printf("Summation of digits are : %d\n", iRet);
+	printf(" Even Digits are : %d\n", iRet);
 	
 	return 0;
-} 
+}

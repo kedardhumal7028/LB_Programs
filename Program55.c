@@ -1,46 +1,47 @@
+//Acccept no from user 751 and output is 13
+// sum of digits
+
+
 #include<stdio.h>
 
-int CountEvenDigits(int iNo)
+
+int CountDigits(int iNo)
 {
-	int iEvenCnt = 0;
 	int iDigit = 0;
+	int iEvenCnt = 0;
 	
-	if(iNo == 0)
+	if(iNo < 0)		//filter
 	{
-		return 1;
-	}
-	
-	if(iNo < 0)
-	{
-		iNo = -iNo;
+		iNo = - iNo;
 	}
 	
 	while(iNo != 0)
 	{
-		iDigit = iNo % 10;
-		
-		if((iDigit % 2) == 0)
+		iDigit = iNo%10;
+		if((iDigit%2)==0)
 		{
 			iEvenCnt++;
 		}
-		iNo = iNo / 10;
-		
+		iNo /= 10;
 	}
+	
 	
 	return iEvenCnt;
 }
+
 
 int main()
 {
 	int iValue = 0;
 	int iRet = 0;
 	
-	printf("Please enter the number : ");
-	scanf("%d",&iValue);
+	printf("please enter number :\n");
+	scanf("%d", &iValue);
 	
-	iRet = CountEvenDigits(iValue);
+	iRet = CountDigits(iValue);
 	
-	printf("Even digits are : %d\n", iRet);
+	
+	printf("Count of even digits are : %d", iRet);
 	
 	return 0;
-}  
+}

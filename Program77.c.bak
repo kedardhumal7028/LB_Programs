@@ -2,26 +2,36 @@
 #include<stdlib.h>
 
 
-int CountEven(int Arr[], int iSize)
+void SumEvenOdd(int Arr[], int iSize)
 {
 	int iCnt = 0;
 	int iEvenCnt = 0;
+	int iOddCnt = 0;
+	int iEvenSum = 0;
+	int iOddSum = 0;
 	
 	for(iCnt = 0; iCnt < iSize; iCnt++)
 	{
 		if((Arr[iCnt] % 2) == 0)
 		{
-			iEvenCnt++;
+			iEvenSum = iEvenSum + Arr[iCnt];
+		}
+		else
+		{
+			iOddSum = iOddSum + Arr[iCnt];
 		}
 	}
 	
-	return iEvenCnt;
+	
+	printf("Even Count is : %d \n",iEvenSum);
+	printf("Odd Count is : %d\n",iOddSum);
+	
 }
 
 int main()
 {
 	int *ptr = NULL;
-	int iLength = 0, i = 0, iRet = 0;
+	int iLength = 0, i = 0;
 	
 	printf("Enter number of elements : \n");
 	scanf("%d",&iLength);
@@ -36,9 +46,9 @@ int main()
 		scanf("%d", &ptr[i]);
 	}
 	
-	iRet = CountEven(ptr, iLength);
+	 SumEvenOdd(ptr, iLength);
 	
-	printf("Count of Even Number is : %d\n",iRet);
+	
 	
 	free(ptr);
 	

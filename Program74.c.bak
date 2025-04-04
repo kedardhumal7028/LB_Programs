@@ -33,7 +33,7 @@ int main()
 	
 	for(i = 0; i < iLength; i++)
 	{
-		scanf("%d", &ptr[i]);
+		scanf("%d", &ptr[i];
 	}
 	
 	iRet = CountEven(ptr, iLength);
