@@ -1,19 +1,39 @@
-// Row = 4
-// Col = 4
+/*
+row = 4
+col = 4
 
-/*  
-	1	2	3	4
-	1	2	3	4
-	1	2	3	4
-	1	2	3	4
-	
+
+*	
+*	*	
+*	*	*	
+*	*	*	*	
+
+
+
 */
 
 #include<stdio.h>
 
 void Display(int iRow, int iCol)
 {
+	int iCnt = 0;
+	int i = 0;
+	int j = 0;
 	
+	if(iRow != iCol)
+	{
+		printf("Row no and column no are not same");
+		return;
+	}
+	
+	for(i = 1; i <= iRow; i++)
+	{
+		for(j = 1; j <= i; j++)
+		{									
+			printf("*\t");						 
+		}
+		printf("\n");
+	}
 }
 
 
@@ -32,4 +52,4 @@ int main()
 	Display(iValue1, iValue2);
 	
 	return 0;
-}
+}    

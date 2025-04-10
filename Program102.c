@@ -13,7 +13,18 @@
 
 void Display(int iRow, int iCol)
 {
+	int iCnt = 0;
+	int i = 0;
+	int j = 0;
 	
+	for(i = 1; i <= iRow; i++)
+	{
+		for(j = 1; j <= iCol; j++)
+		{
+			printf("%d\t",j);
+		}
+		printf("\n");
+	}
 }
 
 

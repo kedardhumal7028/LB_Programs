@@ -13,7 +13,17 @@
 
 void Display(int iRow, int iCol)
 {
+	int iCnt = 0;
+	int i = 0;
+	int j = 0;
 	
+	for(i = 1; iRow <=4; iRow++)
+	{
+		for()
+		{
+			
+		}
+	}
 }
 
 

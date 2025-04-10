@@ -1,19 +1,32 @@
-// Row = 4
-// Col = 4
+/*
+row = 4
+col = 4
 
-/*  
-	1	2	3	4
-	1	2	3	4
-	1	2	3	4
-	1	2	3	4
-	
+
+1	1	1	1
+2	2	2	2
+3	3	3	3
+4	4	4	4 
+
+
 */
 
 #include<stdio.h>
 
 void Display(int iRow, int iCol)
 {
+	int iCnt = 0;
+	int i = 0;
+	int j = 0;
 	
+	for(i = 1; i <= iRow; i++)
+	{
+		for(j = 1; j <= iCol; j++)
+		{
+			printf("%d\t",i);
+		}
+		printf("\n");
+	}
 }
 
 
